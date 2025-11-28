@@ -8,16 +8,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #FFFFD4;
 }
 
-div.page-content {
+div.main-container {
     width: 70%;
     margin: 0 auto;
 }
+
 /* Header beállítások */
 
 header {
@@ -33,6 +39,7 @@ header {
     margin: auto;
     margin-top: 24px;
     border-radius: 8px;
+    box-shadow: 0px 6px 17px 2px rgba(0,0,40,0.25);
 }
 
 h1#page-title {
@@ -42,7 +49,163 @@ h1#page-title {
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
+    font-size: 46px;
     color: white;
 }
 
+/* Header beállítások VÉGE */
 
+/* Navigation bar */
+
+div.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10%;
+    margin-top: 32px;
+    background-color: #FF7F2A;
+    opacity: 0.9;
+    border-radius: 8px;
+    box-shadow: 0px 6px 17px 2px rgba(0,0,40,0.2);
+}
+
+.navbar {
+    position: sticky;
+    top: 12px;
+    overflow: hidden;
+
+}
+
+li a {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    background-color: #BF153F;
+}
+
+/* Navigation bar VÉGE */
+
+/* Oldal tartalma, látványosságok kártyái */
+
+/*
+div.cards {
+    padding: 24px;
+    margin-top: 32px;
+    font-family: Roboto, sans-serif;
+}
+
+img {
+    width: 30%;
+    border-radius: 6px;
+    box-shadow: 0px 6px 17px 2px rgba(0,0,40,0.2);
+
+}
+
+div.content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+div.content p {
+    font-size: 18px;
+    line-height: 180%;
+}
+
+div.latvanyossagok {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin-top: 32px;
+}
+
+#gomba-szikla {
+    flex-direction: row-reverse;
+}
+*/
+
+div.cards {
+    padding: 24px;
+    margin-top: 32px;
+    font-family: Roboto, sans-serif;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 6px 17px 2px rgba(0,0,40,0.2);
+}
+
+/* FLOAT IMG STYLES */
+.float-img {
+    width: 30%;
+    border-radius: 6px;
+    box-shadow: 0px 6px 17px 2px rgba(0,0,40,0.2);
+    margin: 0 16px 16px 0;
+}
+
+/* BALRA FLOAT */
+.float-img.left {
+    float: left;
+}
+
+/* JOBBRA FLOAT */
+.float-img.right {
+    float: right;
+}
+
+/* SZÖVEG */
+.latvanyossagok p {
+    font-size: 18px;
+    line-height: 180%;
+    color: #555;
+}
+
+/* KÁRTYÁK KÖZÖTTI TÁVOLSÁG */
+.latvanyossagok {
+    margin-top: 48px;
+    overflow: auto; /* fontos: float clear-elése */
+}
+
+/* CÍMEK */
+.latvanyossagok h2 {
+    margin-bottom: 12px;
+}
+
+/* GOOGLE MAPS */
+
+footer {
+    margin-top: 48px;
+    margin-bottom: 32px;
+    padding: 12px;
+    background: #f2f2f2;
+    font-family: Roboto, sans-serif;
+    border-radius: 20px;
+
+}
+
+.map-container {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: scroll;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
